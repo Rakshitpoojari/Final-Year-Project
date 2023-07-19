@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="#000">
+
+<!--    <pl.droidsonroids.gif.GifImageView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:background="#000"-->
+<!--        android:src="@drawable/b497e37d05e46f02467e53b02aaea7dc" />-->
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="Avifauna"
+        android:id="@+id/title"
+        android:textSize="30dp"
+        android:textColor="#fff"
+        android:textAlignment="center"
+        android:layout_marginTop="20dp"/>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="250dp"
+        android:layout_height="400dp"
+        android:id="@+id/image"
+        app:cardCornerRadius="8dp"
+        android:layout_below="@+id/title"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        >
+
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#000"
+            android:scaleType="fitXY"/>
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:text="Click on the text to know more :"
+        android:id="@+id/text"
+        android:textSize="20dp"
+        android:textColor="#fff"
+        android:textAlignment="center"
+        android:layout_below="@+id/image"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text=""
+        android:id="@+id/result"
+        android:textSize="20dp"
+        android:textColor="#039BE5"
+        android:textAlignment="center"
+        android:layout_below="@+id/text"
+        android:layout_centerHorizontal="true"/>
+
+    <Button
+        android:id="@+id/selectBtn"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/result"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="30dp"
+        android:textColor="#fff"
+        android:background="@drawable/custom_btn"
+        android:text="Select Image" />
+
+    <Button
+        android:id="@+id/captureBtn"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/result"
+        android:layout_toRightOf="@id/selectBtn"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="20dp"
+        android:textColor="#fff"
+        android:background="@drawable/custom_btn"
+        android:text="Capture Image"
+        app:cornerRadius="10dp"/>
+
+    <Button
+        android:id="@+id/predictBtn"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/captureBtn"
+        android:layout_marginTop="20dp"
+        android:text="Predict"
+        android:layout_centerHorizontal="true"
+        android:textColor="#fff"
+        android:background="@drawable/custom_btn"
+        app:cornerRadius="10dp"/>
+
+</RelativeLayout>
